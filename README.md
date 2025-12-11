@@ -44,9 +44,11 @@ The server will start on port `8080`.
 
 Use `curl` to upload a JPEG file. You can optionally provide `last_modified` (RFC3339 format) to check for timestamp mismatches.
 
+The repository includes sample images (e.g., `Canon_40D.jpg`) that you can use for testing.
+
 ```bash
 curl -X POST http://localhost:8080/v1/analyze \
-  -F "file=@/path/to/image.jpg" \
+  -F "file=@Canon_40D.jpg" \
   -F "last_modified=2023-10-27T10:00:00Z"
 ```
 
@@ -96,3 +98,10 @@ curl -X POST http://localhost:8080/v1/analyze \
 }
 ```
 
+## Testing
+
+Run unit tests:
+
+```bash
+go test ./...
+```
