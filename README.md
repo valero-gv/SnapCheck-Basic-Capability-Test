@@ -96,11 +96,3 @@ curl -X POST http://localhost:8080/v1/analyze \
 }
 ```
 
-## Testing
-
-Run unit tests (if available):
-
-```bash
-go test ./...
-```
-
